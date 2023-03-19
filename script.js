@@ -31,8 +31,10 @@ let search = () => {
   let table = document.getElementById('books');
 
   let tr = table.getElementsByTagName('tr');
+  console.log("searching.....");
 
   for (let i = 0; i < tr.length; i++) {
+    
     let td = tr[i].getElementsByTagName('td')[0];
 
     if (td) {
@@ -42,30 +44,21 @@ let search = () => {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
+        let clearbtn = document.querySelector('.clear');
+  clearbtn.style.display = "flex";
       }
     }
   }
 }
-
-
-let searchnav = () => {
-  let filter = document.getElementById('input2').value.toUpperCase();
+let clearbtn = document.querySelector('.clear');
+clearbtn.addEventListener('click',() =>{
+  console.log("abcd");
+  let input = document.querySelector(".input");
+  input.value = "";
+  clearbtn.style.display = "none";
   let table = document.getElementById('books');
-
   let tr = table.getElementsByTagName('tr');
+  tr.style.display = "table-row";
 
-  for (let i = 0; i < tr.length; i++) {
-    let td = tr[i].getElementsByTagName('td')[0];
 
-    if (td) {
-      let textvalue = td.Content || td.innerHTML;
-
-      if (textvalue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-
+})

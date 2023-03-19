@@ -19,14 +19,18 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
         <header>
             <div class="header-top" id="top-header">
-                <div class="left" id="left">
-                    <input type="text" name="" placeholder="Enter subject" id="input" onkeyup="search()">
+                <!-- <div class="left" id="left">
+                    <input type="text" name="" placeholder="Enter subject" id="input" class="input">
+                    <div class="clear" id="clear">X</div>
+                    <div id="btnactive" class="btn" onclick="search()">F</div>
+                </div> -->
                     <!-- <ul>
                         <li><i class="fa-solid fa-bag-shopping"></i> Featured Products</li>
                         <li>Wishlist</li>
+                </div>
                     </ul> -->
                     
-                </div>
+
                 <div class="right" id="right">
                    
                     <ul>
@@ -43,8 +47,7 @@
                 </div>
             </div>
             <div class="header-bottom" id="header-bottom">
-                <input type="text" name="" placeholder="Enter subject" id="input2" class="navsearch" onkeyup="searchnav()">
-
+                
                 <a class="alogo" href="#main-container"> <img src="logoo.png" class="navlogo"></a>
                 <div class="hamburger">
                     <div class="line"></div>
@@ -84,24 +87,35 @@
                         </li>
                     </ul>
                 </div>
-                <a class="board" href="https:\\www.biselahore.com"><i class="fa-solid fa-building-columns"></i> Lahore board</a>
+                <a class="board" href="https:\\www.biselahore.com" target="_blank"><i class="fa-solid fa-building-columns"></i> Lahore board</a>
             </div>
         </header>
         <!---------------------------------------------homepage------------------------------------------------>
         <div class="main-container" id="main-container">
             <img src="logoo.png" class="mainlogo">
             <div class="intro">
-                <h2>Resources</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus libero vero a, alias porro provident
-                    cupiditate autem eaque minus animi laboriosam nam nemo cum, modi, voluptatibus quasi possimus illo.
-                    Nisi optio ad facilis temporibus voluptate harum in omnis vitae, labore obcaecati necessitatibus
-                    saepe facere, eveniet nostrum voluptas veniam recusandae assumenda.</p>
+                <h2>APCTBooks</h2>
+                <p>All the books of Punjab Curriulum Text Board are available here.
+                    All Books are the latest version of them. We gathered all the books from PCTB.
+                    We also manage the new books and their updates.
+                    Students of Matric and Intermediate can also check the updates by using the button of Lahore Board, By clicking on it you will move to BiseLahore Website where you can see updates as well as you Roll No. slip (if Private student), also  check the web copy of your result card.
+                    On this page all English Medium and Urdu medium books are available.
+                    you can also search for the book you need.
+                    You can learn from these books online or you can download the books of your need very easily.
+                      </p>
                 <a href="#prep">Check it Now</a>
             </div>
             <img class="image" src="main.png">
         </div>
         <!--------------books started --------------->
+
+
         <div class="books" id="books">
+            <div class="left" id="left">
+                <input type="text" name="" placeholder="Search Books" id="input" class="input">
+                <div class="clear" id="clear">X</div>
+                <div id="btnactive" class="btn" onclick="search()">F</div>
+            </div>
         <div class="prep" id="prep">
             <h3><i class="fa-solid fa-book"></i> Prep/KG</h3>
             <table>
@@ -1071,6 +1085,20 @@
             </table>
         </div>
         </div>
+        <footer>
+            <div class="icons">
+                <ul>
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </ul>
+                <p> &copy; ApctbBooks   Term of use . Privacy Policy 
+                </p>
+
+            </div>
+        </footer>
     </div>
 </body>
 <script src="script.js"></script>
