@@ -3,17 +3,21 @@ document.addEventListener("contextmenu", function (e) {
 }, false);
 
 
+let hamburger = document.querySelector(".hamburger")
+hamburger.addEventListener("click", () => {
+  let navbar = document.querySelector(".header-bottom")
+  navbar.classList.toggle("active");
+  let list = document.querySelector(".grades ul");
+  list.classList.toggle("active");  
 
-// Get the button
+})
+
 let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
+window.onscroll =()=> {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
-  } else {
+  }
+  else {
     mybutton.style.display = "none";
   }
 }
@@ -24,17 +28,16 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-
 //search bar functions
 let search = () => {
-  let filter = document.getElementById('input').value.toUpperCase();
+  let filter = document.getElementById('iinput').value.toUpperCase();
   let table = document.getElementById('books');
 
   let tr = table.getElementsByTagName('tr');
   console.log("searching.....");
 
   for (let i = 0; i < tr.length; i++) {
-    
+
     let td = tr[i].getElementsByTagName('td')[0];
 
     if (td) {
@@ -45,20 +48,52 @@ let search = () => {
       } else {
         tr[i].style.display = "none";
         let clearbtn = document.querySelector('.clear');
-  clearbtn.style.display = "flex";
+        clearbtn.style.display = "flex";
       }
     }
   }
 }
+
 let clearbtn = document.querySelector('.clear');
-clearbtn.addEventListener('click',() =>{
+clearbtn.addEventListener('click', () => {
   console.log("abcd");
-  let input = document.querySelector(".input");
+  let input = document.querySelector("#iinput");
   input.value = "";
   clearbtn.style.display = "none";
+  search() = false;
+})
+
+let search1 = () => {
+  let filter = document.getElementById('input').value.toUpperCase();
   let table = document.getElementById('books');
+
   let tr = table.getElementsByTagName('tr');
-  tr.style.display = "table-row";
+  console.log("searching.....");
+
+  for (let i = 0; i < tr.length; i++) {
+
+    let td = tr[i].getElementsByTagName('td')[0];
+
+    if (td) {
+      let textvalue = td.Content || td.innerHTML;
+
+      if (textvalue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+        let clearbtn = document.querySelector('.clear1');
+        clearbtn.style.display = "flex";
+      }
+    }
+  }
+}
 
 
+let clearbtn1 = document.querySelector('.clear1');
+clearbtn1.addEventListener('click', () => {
+  console.log("abcd");
+  let input = document.querySelector("#input");
+  input.value = "";
+  clearbtn1.style.display = "none";
+  search1() = false;
 })
