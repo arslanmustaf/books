@@ -8,8 +8,9 @@ hamburger.addEventListener("click", () => {
   let navbar = document.querySelector(".header-bottom")
   navbar.classList.toggle("active");
   let list = document.querySelector(".grades ul");
-  list.classList.toggle("active");  
-
+  list.classList.toggle("active");
+  let listf = document.querySelector(".grades ul.active")  
+   listf.style.opacity = "100%";
 })
 
 let mybutton = document.getElementById("myBtn");
