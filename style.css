@@ -191,11 +191,25 @@ header {
     cursor: pointer;
 }
 
-.line {
+.line1,.line2,.line3 {
     width: 30px;
     height: 4px;
     margin: 7px;
     background-color: rgb(230, 231, 255);
+    transition: .1s ease-in-out;
+}
+
+.line1.active{
+    transform: rotate(45deg) translate(7px,8px);
+    /* transition: 1s ease-in-out; */
+}
+.line3.active{
+    transform: rotate(-45deg);
+    /* transition: 1s ease-in-out; */
+}
+.line2.active{
+    display: none;
+    /* transition: 1s ease-in; */
 }
 
 .header-bottom.active {

@@ -4,9 +4,16 @@ document.addEventListener("contextmenu", function (e) {
 
 
 let hamburger = document.querySelector(".hamburger")
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", ()=> {
   let navbar = document.querySelector(".header-bottom")
   navbar.classList.toggle("active");
+  let line1 = document.querySelector('.line1')
+  line1.classList.toggle("active");
+  let line2 = document.querySelector('.line2')
+  line2.classList.toggle("active");
+  let line3 = document.querySelector('.line3')
+  line3.classList.toggle("active");
+
   let list = document.querySelector(".grades ul");
   list.classList.toggle("active");
   let listf = document.querySelector(".grades ul.active")  
