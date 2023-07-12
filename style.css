@@ -9,6 +9,7 @@
 
 .homepage {
     background: linear-gradient(20deg, #e0cef1, #d1e3d1, #aeaedd);
+        display: none;
 }
 p{
     cursor: pointer;
